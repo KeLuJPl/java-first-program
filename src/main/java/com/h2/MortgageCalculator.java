@@ -2,6 +2,8 @@ package com.h2;
 
 import java.text.DecimalFormat;
 
+import static java.lang.Math.pow;
+
 public class MortgageCalculator {
 
     public static void main(String[] args){
@@ -42,9 +44,8 @@ public class MortgageCalculator {
         float r = getMonthlyInterestRate();
         int n = getNumberOfPayments();
 
-        double M;
-        M = P * (((r * Math.pow(1 + r, n))) / ((Math.pow((1 + r), n)) - 1));
 
+        double M = P * (((r * pow(1 + r, n))) / ((pow((1 + r), n)) - 1));
         this.monthlyPayment = M;
     }
 
