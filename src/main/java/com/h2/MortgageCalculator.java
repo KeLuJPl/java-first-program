@@ -11,10 +11,10 @@ public class MortgageCalculator {
         int termInYears = Integer.parseInt(args[1]);
         float annualRate = Float.parseFloat(args[2]);
 
+
         MortgageCalculator calculator = new MortgageCalculator(loanAmount, termInYears, annualRate);
         calculator.calculateMonthlyPayment();
-
-        System.out.print(calculator.toString());
+        System.out.print(calculator.toString() + "\n");
     }
 
 
