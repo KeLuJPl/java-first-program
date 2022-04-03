@@ -35,7 +35,7 @@ public class MortgageCalculator {
     }
 
     private float getMonthlyInterestRate(){
-        float interestRate = annualRate * 100;
+        float interestRate = annualRate / 100;
         return interestRate / 12;
     }
 
@@ -45,7 +45,8 @@ public class MortgageCalculator {
         int n = getNumberOfPayments();
 
 
-        double M = P * (((r * pow(1 + r, n))) / ((pow((1 + r), n)) - 1));
+        double M;
+        M = P * (((r * pow(1 + r, n))) / ((pow((1 + r), n)) - 1));
         this.monthlyPayment = M;
     }
 
