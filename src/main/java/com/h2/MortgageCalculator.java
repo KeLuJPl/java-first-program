@@ -14,7 +14,7 @@ public class MortgageCalculator {
         MortgageCalculator calculator = new MortgageCalculator(loanAmount, termInYears, annualRate);
         calculator.calculateMonthlyPayment();
 
-        System.out.println(calculator.toString());
+        System.out.print(calculator.toString());
     }
 
 
